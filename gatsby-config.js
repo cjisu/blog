@@ -5,5 +5,16 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `개인 블로그`,
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/content/blog`,
+      },
+    },
+  ],
 }
