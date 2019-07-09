@@ -1,10 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Container from '../components/container';
+import Layout from '../components/layout';
 
 export default ({ data }) => {
   return (
-    <Container>
+    <Layout>
       <div>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -16,7 +16,7 @@ export default ({ data }) => {
           </div>
         ))}
       </div>
-      </Container>
+      </Layout>
   )
 }
 
