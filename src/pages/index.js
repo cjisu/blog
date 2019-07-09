@@ -1,22 +1,53 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from '../components/layout';
+import styled from "styled-components"
+
+const Posts = styled.div`
+  margin: 80px 24px;
+`;
+
+const PostBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  background: #ffffff;
+  padding: 24px;
+  box-shadow: 1px 1px 54px 0 rgba(0, 0, 0, 0.04);
+`;
+
+const PostBoxHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const PostBoxDescription = styled.div`
+  margin-top: 24px;
+  font-size: 14px;
+  color: #333333;
+`;
 
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      <Posts>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}>
-              <h3>{node.frontmatter.title}</h3>
-            </Link> 
-          </div>
+          <PostBox key={node.id}>
+            <PostBoxHeader >
+              <Link
+                to={node.fields.slug}>
+                <h3>{node.frontmatter.title}</h3>
+              </Link> 
+              <h3>{node.frontmatter.publishedAt}</h3>
+            </PostBoxHeader>
+            <PostBoxDescription>
+              {node.frontmatter.description}
+            </PostBoxDescription>
+          </PostBox>
         ))}
-      </div>
-      </Layout>
+      </Posts>
+    </Layout>
   )
 }
 
@@ -29,6 +60,8 @@ export const query = graphql`
           id
           frontmatter {
             title
+            publishedAt
+            description
           }
           fields {
             slug

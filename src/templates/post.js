@@ -17,6 +17,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        publishedAt
+        description
       }
     }
   }
