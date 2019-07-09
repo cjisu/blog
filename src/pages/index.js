@@ -1,37 +1,38 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const posts = data.allMarkdownRemark.edges
-
-    return (
-        <div>
-            {posts.map(({node}) => {
-                return (
-                  <div>{node.frontmatter.title}</div>
-                )
-            })}
-        </div>
-    )
-  }
+export default ({ data }) => {
+  return (
+      <div>
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <Link
+              to={node.fields.slug}>
+              <h3>{node.frontmatter.title}</h3>
+            </Link> 
+          </div>
+        ))}
+      </div>
+  )
 }
 
-export default BlogIndex
-
-export const pageQuery = graphql`
+export const query = graphql`
   query {
-    allMarkdownRemark {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              publishedAt
-            }
+    allMarkdownRemark(sort: { fields: [frontmatter___publishedAt], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
           }
+          fields {
+            slug
+          }
+          excerpt
         }
       }
+    }
   }
 `
