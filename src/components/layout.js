@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { GlobalStyle } from '../theme/globalStyle';
+import Header from './header';
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
@@ -33,6 +34,7 @@ const Layout = ({ children }) => (
           ]}>
           <html lang="en" />
         </Helmet>
+        <Header />
         <ContentWrapper>{children}</ContentWrapper>
       </>
     )}
