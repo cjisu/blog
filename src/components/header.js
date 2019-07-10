@@ -10,8 +10,7 @@ const Header = styled.section`
   top: 0;
   right: 0;
   background: #ffffff;
-  height: 50px;
-  box-shadow: 1px 1px 54px 0 rgba(0, 0, 0, 0.04);
+  height: 100px;
 `
 
 const HeadrItem = styled.div`
@@ -20,9 +19,17 @@ const HeadrItem = styled.div`
   margin: 0 24px;
 `;
 
+const SelectedHeaderItem = styled(HeadrItem)`
+  color: #FFAE00;
+`
+
+const UnSelectedHeaderItem = styled(HeadrItem)`
+  color: #B9B9B9
+`
+
 export default () => (
   <Header>
-      <HeadrItem>Blog</HeadrItem>
-      <HeadrItem>About</HeadrItem>
+      <SelectedHeaderItem>Blog</SelectedHeaderItem>
+      <UnSelectedHeaderItem>About</UnSelectedHeaderItem>
   </Header>
 )
