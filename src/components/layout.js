@@ -9,7 +9,7 @@ import Header from './header';
 const ContentWrapper = styled.div`
   margin: 0 auto;
   maxwidth: 960;
-  paddingtop: 0;
+  padding-top: 100px;
 `;
 
 const Layout = ({ children }) => (

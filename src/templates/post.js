@@ -19,6 +19,13 @@ export const query = graphql`
         title
         publishedAt
         description
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

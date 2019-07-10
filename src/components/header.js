@@ -9,14 +9,14 @@ const Header = styled.section`
   left:0;
   top: 0;
   right: 0;
-  background: #ffffff;
   height: 100px;
+  padding-left: 14vw;
 `
 
 const HeadrItem = styled.div`
   font-size: 18px;
   font-weight: bold;
-  margin: 0 24px;
+  margin-right: 74px;
 `;
 
 const SelectedHeaderItem = styled(HeadrItem)`
@@ -30,6 +30,7 @@ const UnSelectedHeaderItem = styled(HeadrItem)`
 export default () => (
   <Header>
       <SelectedHeaderItem>Blog</SelectedHeaderItem>
+      <UnSelectedHeaderItem>Project</UnSelectedHeaderItem>
       <UnSelectedHeaderItem>About</UnSelectedHeaderItem>
   </Header>
 )
