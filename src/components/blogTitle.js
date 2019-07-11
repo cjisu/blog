@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
 export default () => (
   <Wrapper>
-    <span style={{color: "#FFAE00"}}>bl</span>
+    <span style={{color: "#333333"}}>bl</span>
     <span style={{color: "#B9B9B9"}}>og</span>
   </Wrapper>
 )
