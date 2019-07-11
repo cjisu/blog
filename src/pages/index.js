@@ -7,7 +7,6 @@ import styled from "styled-components"
 
 const Posts = styled.div`
   padding: 0 14vw;
-  color: #B9B9B9;
 `;
 
 const PostBox = styled(Link)`
@@ -19,23 +18,28 @@ const PostBox = styled(Link)`
 
 const PostTitle = styled.div`
   font-size: 18px;
+  font-weight: bold;
+  color: #333333;
 `;
 
 const PostBoxDescription = styled.div`
   margin-top: 8px;
   font-size: 14px;
+  color: #666666;
 `;
 
 const PostImageBox = styled.div`
   margin-top: 32px;
+  width: 720px; 
   height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FAFAFA;
 `;
 
 const PostImage = styled(Img)`
-max-width: 100%;
-max-height: 100%;
-margin: auto;
-display: block;
+  display: block;
 `;
 
 export default ({ data }) => {
@@ -49,11 +53,12 @@ export default ({ data }) => {
             <PostBoxDescription>
               {node.frontmatter.description}
             </PostBoxDescription>
-            <PostImageBox 
-              style={{
-                width: `190px`
-              }}>
-              <PostImage fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+            <PostImageBox>
+              <PostImage fluid={node.frontmatter.featuredImage.childImageSharp.fluid} style={{
+                width: `${190 * 
+                  (node.frontmatter.featuredImage.childImageSharp.fluid.presentationWidth
+                  /node.frontmatter.featuredImage.childImageSharp.fluid.presentationHeight)}px`
+              }}/>
             </PostImageBox>
           </PostBox>
         ))}
