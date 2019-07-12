@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
-import { GlobalStyle } from '../theme/globalStyle';
-import Header from './header';
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import Helmet from "react-helmet"
+import { StaticQuery, graphql } from "gatsby"
+import { GlobalStyle } from "../theme/globalStyle"
+import Header from "./header"
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
   maxwidth: 960;
   padding-top: 100px;
-`;
+`
 
 const Layout = ({ children }) => (
-    <StaticQuery
+  <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
@@ -29,9 +29,10 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}>
+            { name: "description", content: "Sample" },
+            { name: "keywords", content: "sample, something" },
+          ]}
+        >
           <html lang="en" />
         </Helmet>
         <Header />
@@ -39,8 +40,10 @@ const Layout = ({ children }) => (
       </>
     )}
   />
-);
+)
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
-export default Layout;
+}
+
+export default Layout
