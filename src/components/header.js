@@ -11,6 +11,8 @@ const Header = styled.section`
   right: 0;
   height: 100px;
   padding-left: 14vw;
+  background: #ffffff;
+  z-index: 1;
 `
 
 const HeadrItem = styled.div`

@@ -14,6 +14,7 @@ const PostBox = styled(Link)`
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+  margin-bottom: 32px;
 `;
 
 const PostTitle = styled.div`

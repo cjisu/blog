@@ -17,12 +17,13 @@ const Wrapper = styled.div`
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
-    <Layout>
-      <Wrapper>
+    <div style={{
+      width: `720px`,
+      margin:`0 auto`
+    }}>
         <PostTitle>{post.frontmatter.title}</PostTitle>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Wrapper>
-    </Layout>
+    </div>
   )
 }
 
