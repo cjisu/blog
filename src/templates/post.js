@@ -1,13 +1,28 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
+import Layout from "../components/layout"
+
+const PostTitle = styled.div`
+  font-size: 48px;
+  margin-bottom: 32px;
+  color: #333333;
+`
+
+const Wrapper = styled.div`
+  width: 720px;
+  margin: 0 auto;
+`
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
-      <div>
-        <h1>{post.frontmatter.title}</h1>
+    <Layout>
+      <Wrapper>
+        <PostTitle>{post.frontmatter.title}</PostTitle>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      </Wrapper>
+    </Layout>
   )
 }
 
