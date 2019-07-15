@@ -16,9 +16,17 @@ module.exports = {
         path: `${__dirname}/src`,
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Noto Sans KR", "Noto Sans"],
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`, 
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -29,7 +37,7 @@ module.exports = {
             options: {
               maxWidth: 360,
               wrapperStyle:
-              'margin-left: 0!important; margin-right: 0!important;'
+                "margin-left: 0!important; margin-right: 0!important;",
             },
           },
           {

@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react"
+import styled from "styled-components"
 
 const Wrapper = styled.div`
   display: flex;
@@ -7,11 +7,11 @@ const Wrapper = styled.div`
   height: 169px;
   padding-left: 14vw;
   font-size: 36px;
-`;
+`
 
 export default () => (
   <Wrapper>
-    <span style={{color: "#333333"}}>bl</span>
-    <span style={{color: "#B9B9B9"}}>og</span>
+    <span style={{ color: "#333333" }}>bl</span>
+    <span style={{ color: "#B9B9B9" }}>og</span>
   </Wrapper>
 )
