@@ -24,6 +24,6 @@ Gatsby는 React를 기반으로 한 WebSite 빠르게 만들고 배포할 수 �
 2. Data Source File 설정 및 사용하기
 3. MarkDown 문서를 Data Source File 로 사용하기
 4. MarkDown 문서로 페이지 추가하기
-5. styled component 사용하기
-6. image 설정 추가 및 사용하기
+5. image 설정 추가 및 사용하기
+6. Font 설정 하기
 7. 배포

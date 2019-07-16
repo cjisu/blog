@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100px;
+  padding-left: 14vw;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.header__item {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 74px;
+}

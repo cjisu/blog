@@ -1,0 +1,7 @@
+.blog__title {
+  display: flex;
+  align-items: center;
+  height: 169px;
+  padding-left: 14vw;
+  font-size: 36px;
+}

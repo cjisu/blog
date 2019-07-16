@@ -1,0 +1,37 @@
+.posts{
+  padding: 0 14vw;
+}
+
+.post__box{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 32px;
+}
+
+.post__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.post__box__description {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.post__image__box {
+  margin-top: 32px;
+  width: 720px; 
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FAFAFA;
+}
+
+.post__image {
+  display: block;
+}
