@@ -17,7 +17,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`, 
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -28,7 +28,7 @@ module.exports = {
             options: {
               maxWidth: 360,
               wrapperStyle:
-              'margin-left: 0!important; margin-right: 0!important;'
+                "margin-left: 0!important; margin-right: 0!important;",
             },
           },
         ],
