@@ -1,7 +1,7 @@
 ---
 title: Gatsby Blog 만들기 2
 subTitle: Gatsby
-publishedAt: 2019-07-09
+publishedAt: 2019-07-09T00:00:01
 description: Gatsby 를 활용하여 Blog 개발하기
 featuredImage: ../gatsby1/main.png
 ---
