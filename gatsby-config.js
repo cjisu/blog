@@ -16,7 +16,6 @@ module.exports = {
         path: `${__dirname}/src`,
       },
     },
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`, 
     `gatsby-transformer-sharp`,
@@ -32,14 +31,6 @@ module.exports = {
               'margin-left: 0!important; margin-right: 0!important;'
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-smartypants`,
         ],
       },
     },
