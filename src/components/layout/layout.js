@@ -18,11 +18,13 @@ const Layout = ({ children }) => (
         `}
         render={data => (
             <>
-                <Helmet title={data.site.siteMetadata.title}>
+                <Helmet 
+                    title={data.site.siteMetadata.title} 
+                    meta={[{ name: 'viewport', content: 'width=device-width, user-scalable=1' }]}>
                     <html lang="ko" />
                 </Helmet>
-                <Header />
-                <div class="contents">{children}</div>
+                    <Header />
+                    <div className="contents">{children}</div>
             </>
         )}
     />

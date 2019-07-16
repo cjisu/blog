@@ -1,6 +1,5 @@
 .post__template {
-  width: 720px;
-  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .post__template__title {
@@ -22,3 +21,10 @@ blockquote {
     padding-right: 20px;
     border-left: 10px solid #ffae00;
   }
+
+@media (max-width: 400px) {
+.post__template__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+}

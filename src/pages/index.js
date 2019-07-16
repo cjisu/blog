@@ -3,22 +3,26 @@ import { Link, graphql } from "gatsby"
 import BlogTitle from "../components/blogTitle/blogTitle"
 import Layout from "../components/layout/layout"
 import Img from "gatsby-image"
+import '../assets/css/reset.css'
 import "../assets/css/pageIndex.css"
 
 export default ({ data }) => {
   return (
     <Layout>
       <BlogTitle />
-      <div class="posts">
+      <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link class="post__box" key={node.id} to={node.fields.slug}>
-            <div class="post__title">{node.frontmatter.title}</div>
-            <div class="post__box__description">
-              {node.frontmatter.description}
-            </div>
-            <div class="post__image__box">
+          <Link className="post__box" key={node.id} to={node.fields.slug}>
+              <div className="post__text__box">
+                <div className="post__title">{node.frontmatter.title}</div>
+                <div className="post__box__description">
+                {node.frontmatter.description}
+                </div>
+              </div>
+
+            <div className="post__image__box">
               <Img
-                class="post__image"
+                className="post__image"
                 fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
                 style={{
                   width: `${190 *

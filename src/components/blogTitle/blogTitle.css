@@ -1,7 +1,14 @@
 .blog__title {
   display: flex;
+  flex-direction: row;
   align-items: center;
   height: 169px;
-  padding-left: 14vw;
   font-size: 36px;
+}
+
+@media (max-width: 400px) {
+  .blog__title {
+    font-size: 18px;
+    height: 40px;
+  }
 }
