@@ -1,8 +1,8 @@
 ---
 title: Gatsby Blog 만들기 2
-subTitle: Gatsby
-publishedAt: 2019-07-09T00:00:01
-description: Gatsby 를 활용하여 Blog 개발하기
+subTitle: Gatsby - Hello World
+publishedAt: 2019-07-18T11:15:00
+description: Gatsby - Hello World 
 featuredImage: ../gatsby1/main.png
 ---
 Far far away, behind the word mountains, far from the countries Vokalia and

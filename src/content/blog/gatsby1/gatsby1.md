@@ -1,12 +1,10 @@
 ---
-title: Gatsby Blog 만들기
-subTitle: Gatsby
+title: Gatsby Blog 만들기 1
+subTitle: Gatsby 소개
 publishedAt: 2019-07-09T00:00:00
 description: Gatsby 를 활용하여 Blog 개발하기
 featuredImage: ./main.png
 ---
-
-#### Gatsby 소개
 
 Gatsby는 React를 기반으로 한 WebSite 빠르게 만들고 배포할 수 있는 무료 오픈 소스 프레임워크 입니다.
 
