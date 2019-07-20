@@ -31,6 +31,7 @@ module.exports = {
                 "margin-left: 0!important; margin-right: 0!important;",
             },
           },
+          `gatsby-remark-prismjs`
         ],
       },
     },
