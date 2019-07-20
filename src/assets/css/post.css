@@ -22,15 +22,6 @@ blockquote {
     border-left: 10px solid #ffae00;
 }
 
-code{
-  padding: 8px;
-  margin: 8px 0px;
-  background-color: #333333;
-  color: #ffffff;
-  display: block; 
-  white-space: pre-wrap 
-}
-
 @media (max-width: 400px) {
 .post__template__title {
   font-size: 18px;
