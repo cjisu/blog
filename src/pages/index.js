@@ -16,7 +16,7 @@ export default ({ data }) => {
               <div className="post__text__box">
                 <div className="post__title">{node.frontmatter.title}</div>
                 <div className="post__box__description">
-                {node.frontmatter.description}
+                {node.frontmatter.subTitle}
                 </div>
               </div>
 
@@ -51,6 +51,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            subTitle
             publishedAt
             description
             featuredImage {

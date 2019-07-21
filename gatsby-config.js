@@ -6,15 +6,15 @@
 
 module.exports = {
   siteMetadata: {
-    title: `개인 블로그`,
+    title: `개인 블로그`
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src`,
-      },
+        path: `${__dirname}/src`
+      }
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
@@ -26,14 +26,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 360,
+              maxWidth: 720,
               wrapperStyle:
-                "margin-left: 0!important; margin-right: 0!important;",
-            },
+                "margin-left: 0!important; margin-right: 0!important;"
+            }
           },
           `gatsby-remark-prismjs`
-        ],
-      },
-    },
-  ],
+        ]
+      }
+    }
+  ]
 }

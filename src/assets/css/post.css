@@ -8,23 +8,27 @@
   color: #333333;
 }
 
-.post__template__contents{
+.post__template__contents {
   font-size: 14px;
   color: #333333;
 }
 
 blockquote {
-    border: 1px solid #ffae00;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-left: 10px solid #ffae00;
+  border: 1px solid #ffae00;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 10px solid #ffae00;
 }
 
 @media (max-width: 400px) {
-.post__template__title {
-  font-size: 18px;
-  font-weight: bold;
-}
+  .post__template__title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  pre[class*="language-"] {
+    width: calc(100vw - 64px);
+  }
 }

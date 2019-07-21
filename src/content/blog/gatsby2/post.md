@@ -1,9 +1,9 @@
 ---
-title: Gatsby Blog 만들기 2
-subTitle: Gatsby - Hello World
+title: Gatsby Hello World
+subTitle: Gatsby Blog 만들기 2
 publishedAt: 2019-07-18T11:15:00
 description: Gatsby - Hello World 
-featuredImage: ../gatsby1/main.png
+featuredImage: ./gatsby-hello-world.png
 ---
 안녕하세요, 오늘은 Gatsby 초기 설정 및 Hello World 를 띄워보겠습니다.  
 먼저 node 설치가 안되신 분들은 설치를 해주시고 글을 읽어주세요  
@@ -21,12 +21,14 @@ featuredImage: ../gatsby1/main.png
 실행시킨 명령어의 구조는 아래와 같습니다
 ```SHEEL
 > npx gatsby new [프로젝트 폴더명] [Gatsby 템플릿 깃 레포 주소]  
-```
+```  
 
-### Gatsby develop 실행
+### Gatsby develop 실행  
 이제 코드를 열어보시면 아래 사진과 같이 "src/pages/index.js" 코드를 확인하실 수 있습니다.
-![gatsby-hello-world](./gatsby-hello-world.png)
-이후 터미널에서 `npx gatsby develop` 를 실행시켜주세요
+![gatsby-hello-world](./gatsby-hello-world.png)  
+
+이후 터미널에서 `npx gatsby develop` 를 실행시켜주시면   
+http://0.0.0.0:8000/ 에서 아래 사진과 같은 화면을 확인하실 수 있습니다!
 ![hello-world](./hello-world.png)
 
 > 이제 index.js 파일을 자유롭게 수정해보세요

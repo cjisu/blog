@@ -1,34 +1,56 @@
 ---
-title: Gatsby - styling
-subTitle: Gatsby Blog 만들기 3
-publishedAt: 2019-07-20T17:32:00
+title: Gatsby - layout
+subTitle: Gatsby Blog 만들기 4
+publishedAt: 2019-07-21T22:41:00
 description: Gatsby css 적용하기
 featuredImage: ./global.png
 ---
 
-안녕하세요, 오늘은 Gatsby styling을 다뤄보도록 하겠습니다.  
-styling으로 어떤걸 하는지 간단하게 설명드리면  
-개인 블로그의 디자인 요소를 첨가한다고 생각하시면 됩니다  
-예를 들어 블로그 제목의 폰트 크기, 폰트 생상, 배경화면 생상 등을 수정하는 작업입니다!  
-그리고 해당 포스트에서는 css에 대한 기본 개념이 필요한 점 참고 부탁드립니다!
+안녕하세요, 오늘은 layout을 만들어 보려고 합니다.  
+layout을 만드는 이유는 일관된 페이지 구성을 전달하기 위해서 사용합니다  
+layout에 헤더 바, 본문, 네비게이션 등을 구현한 후 여러 페이지에서 적용할 수 있어요!
 
-### Gatsby Global Style
+### Typography
 
-이전 포스트에서 생성한 my-blog 프로젝트 전체에 적용할 global style 을 설정 해보겠습니다.  
-global.css 파일과 gatsby-browser.js 파일을 생성해 주세요!
+웹 사이트를 좀 더 예쁘게 하기 위한 툴킷 입니다.
 
-```
-├── package.json
-├── src
-│   └── pages
-│       └── index.js
-│   └── styles
-│       └── global.css
-├── gatsby-browser.js
+```shell
+npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
 ```
 
-- global.css : 프로젝트에 전역으로 적용할 css 파일
-- gatsby-browser.js : Gatsby 에서 사용하는 특수 파일입니다.
+typography 설치 후 my-blog 폴더에 있는 gatsby-config.js 파일 수정이 필요한데요
+아래와 같이 수정하시면 됩니다.
+
+```
+# gatsby-config.js
+
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+  ],
+}
+```
+
+- gatsby-config.js : Gatsby 사이트 설정 옵션들을 정의하는 파일
+
+추가로 코드 내에서 사용할 typography 옵션을 정의하도록 하겠습니다
+정의할 파일은 gatsby-config.js 에서 pathToConfigModule 에 정의한 위치에 해주셔야 합니다.
+다르게 사용하고 싶으시면 pathToConfigModule 과 정의한 파일의 위치만 일치하면 되겠죠?!
+
+```javascript
+import Typography from "typography"
+import fairyGateTheme from "typography-theme-fairy-gates"
+
+const typography = new Typography(fairyGateTheme)
+
+export const { scale, rhythm, options } = typography
+export default typography
+```
 
 > _gatsby-browser.js_ (skip 해도 됨)
 > Gatsby 는 정적 웹 사이트이긴 하지만 페이지가 로드된 후에 동적으로
