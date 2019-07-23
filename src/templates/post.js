@@ -1,21 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from '../components/layout/layout'
-import '../assets/css/reset.css'
+import Layout from "../components/layout/layout"
+import "../assets/css/reset.css"
 import "../assets/css/post.css"
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
-      <Layout>
-        <div className="post__template">
-          <div className="post__template__title">{post.frontmatter.title}</div>
-          <div
-              className="post__template__contents"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-        </div>
-      </Layout>
+    <Layout>
+      <div className="post__template">
+        <div className="post__template__title">{post.frontmatter.title}</div>
+        <div
+          className="post__template__contents"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </div>
+    </Layout>
   )
 }
 
