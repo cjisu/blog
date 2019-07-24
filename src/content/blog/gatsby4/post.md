@@ -3,7 +3,7 @@ title: Gatsby - layout
 subTitle: Gatsby Blog 만들기 4
 publishedAt: 2019-07-21T22:41:00
 description: Gatsby css 적용하기
-featuredImage: ./global.png
+featuredImage: ./component-scoped-css.png
 ---
 
 안녕하세요, 오늘은 layout을 만들어 보려고 합니다.  
